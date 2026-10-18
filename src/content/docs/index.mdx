@@ -2,7 +2,7 @@
 description: Um guia completo para criar, personalizar e compreender temas do GNU GRUB2.
 template: splash
 title: GRUB2 Theme Guide
-tagline: Da primeira linha do theme.txt ao último pixel. Aprenda a criar interfaces de inicialização personalizadas e entenda como o sistema de temas do GRUB2 realmente funciona.
+tagline: da primeira linha do theme.txt ao último pixel. Aprenda a criar interfaces de inicialização personalizadas e entenda como o sistema de temas do GRUB2 realmente funciona.
 ---
 
 import {
@@ -67,26 +67,26 @@ uma propriedade específica.
 <CardGrid>
     <LinkCard
         title="Primeiros passos"
-        description="Prepare o ambiente, conheça a estrutura dos arquivos e crie seu primeiro tema funcional."
-        href="/getting-started/introduction/"
+        description="Prepare seu ambiente, conheça a estrutura dos arquivos e crie seu primeiro tema para o GRUB."
+        href="/getting-started/"
     />
 
     <LinkCard
-        title="Tutorial passo a passo"
-        description="Construa uma interface completa, adicionando e personalizando cada componente."
-        href="/tutorial/background/"
+        title="Componentes"
+        description="Aprenda a utilizar imagens, textos, menus de inicialização, indicadores de progresso e outros componentes gráficos."
+        href="/components/"
     />
 
     <LinkCard
-        title="Conceitos fundamentais"
-        description="Entenda coordenadas, dimensões, layouts, redimensionamento e decorações gráficas."
-        href="/concepts/coordinates/"
+        title="Organização visual"
+        description="Entenda coordenadas, dimensões, posicionamento e como organizar elementos utilizando contêineres."
+        href="/layout/"
     />
 
     <LinkCard
         title="Referência técnica"
-        description="Consulte propriedades, tipos de dados, componentes e comandos relacionados ao GRUB2."
-        href="/reference/components/"
+        description="Consulte propriedades globais, parâmetros dos componentes, tipos de dados e comandos do GRUB."
+        href="/reference/"
     />
 </CardGrid>
 
@@ -101,13 +101,26 @@ como devem ser apresentados na tela.
 Por exemplo:
 
 ```text
-# Background
-desktop-color: "#101018"
 desktop-image: "background.png"
 
-# Title
-title-text: "GNU GRUB"
-title-color: "#ffffff"
++ boot_menu {
+  left = 10%
+  top = 20%
+  width = 80%
+  height = 60%
+  item_font = "sans-16"
+  item_color = "#ffffff"
+  selected_item_color = "#ffff00"
+  font: "jetbrains-mono-regular.pf2";
+}
+
++ progress_bar {
+  left = 10%
+  top = 85%
+  width = 80%
+  height = 5%
+  color = "#00ff00"
+}
 ```
 
 Essas poucas propriedades já permitem alterar a
@@ -129,8 +142,6 @@ precisam ser consideradas.
 Assim, você terá conhecimento suficiente para criar
 seus próprios temas, experimentar novas ideias e
 investigar comportamentos não documentados.
-
----
 
 **Pronto para começar?**
 
