@@ -1,0 +1,137 @@
+---
+description: Um guia completo para criar, personalizar e compreender temas do GNU GRUB2.
+template: splash
+title: GRUB2 Theme Guide
+tagline: Da primeira linha do theme.txt ao último pixel. Aprenda a criar interfaces de inicialização personalizadas e entenda como o sistema de temas do GRUB2 realmente funciona.
+---
+
+import {
+    Card,
+    CardGrid,
+    LinkCard,
+} from '@astrojs/starlight/components';
+
+## Muito além de trocar o papel de parede
+
+O GNU GRUB2 possui um sistema de temas que permite personalizar
+praticamente toda a aparência de sua interface gráfica: imagens,
+fontes, menus, indicadores de progresso e muito mais.
+
+O problema? Grande parte desses recursos é pouco documentada,
+e compreender como cada propriedade afeta o resultado visual
+nem sempre é simples.
+
+**Este guia foi criado para mudar isso.**
+
+Aqui, você aprenderá a construir um tema do zero, entenderá
+o funcionamento de cada componente e descobrirá como controlar
+sua aparência e seu posicionamento com precisão.
+
+<CardGrid stagger>
+    <Card title="Aprenda construindo" icon="rocket">
+        Desenvolva um tema completo, passo a passo.
+
+        Cada capítulo introduz novos elementos e aprimora
+        o resultado do capítulo anterior.
+    </Card>
+
+    <Card title="Entenda cada componente" icon="puzzle">
+        Explore imagens, textos, menus, contêineres,
+        indicadores de progresso e decorações gráficas.
+
+        Saiba como funcionam, quais propriedades aceitam
+        e como combiná-los.
+    </Card>
+
+    <Card title="Controle cada pixel" icon="seti:css">
+        Entenda coordenadas, dimensões, alinhamento,
+        proporções e o sistema de decoração em nove regiões.
+
+        Aprenda também sobre as limitações do mecanismo
+        de renderização do GRUB2.
+    </Card>
+
+    <Card title="Teste sem arriscar seu sistema" icon="approve-check-circle">
+        Utilize ferramentas como QEMU para testar seus
+        temas em um ambiente virtualizado antes de
+        aplicá-los ao bootloader da sua máquina.
+    </Card>
+</CardGrid>
+
+## Por onde começar?
+
+O conteúdo está organizado para atender tanto quem está
+criando seu primeiro tema quanto quem precisa consultar
+uma propriedade específica.
+
+<CardGrid>
+    <LinkCard
+        title="Primeiros passos"
+        description="Prepare o ambiente, conheça a estrutura dos arquivos e crie seu primeiro tema funcional."
+        href="/getting-started/introduction/"
+    />
+
+    <LinkCard
+        title="Tutorial passo a passo"
+        description="Construa uma interface completa, adicionando e personalizando cada componente."
+        href="/tutorial/background/"
+    />
+
+    <LinkCard
+        title="Conceitos fundamentais"
+        description="Entenda coordenadas, dimensões, layouts, redimensionamento e decorações gráficas."
+        href="/concepts/coordinates/"
+    />
+
+    <LinkCard
+        title="Referência técnica"
+        description="Consulte propriedades, tipos de dados, componentes e comandos relacionados ao GRUB2."
+        href="/reference/components/"
+    />
+</CardGrid>
+
+## Um arquivo. Muitas possibilidades.
+
+Grande parte da aparência de um tema é controlada por
+um arquivo chamado `theme.txt`.
+
+Nele, você descreve os elementos gráficos e define
+como devem ser apresentados na tela.
+
+Por exemplo:
+
+```text
+# Background
+desktop-color: "#101018"
+desktop-image: "background.png"
+
+# Title
+title-text: "GNU GRUB"
+title-color: "#ffffff"
+```
+
+Essas poucas propriedades já permitem alterar a
+aparência inicial do GRUB2.
+
+Ao longo do tutorial, vamos explorar desde configurações
+simples como essas até interfaces compostas por múltiplos
+componentes, imagens e decorações personalizadas.
+
+## Construído para aprender, não apenas copiar
+
+O objetivo deste guia não é fornecer uma coleção de
+configurações prontas para copiar e colar.
+
+É explicar **por que cada configuração funciona**,
+como os elementos são renderizados e quais limitações
+precisam ser consideradas.
+
+Assim, você terá conhecimento suficiente para criar
+seus próprios temas, experimentar novas ideias e
+investigar comportamentos não documentados.
+
+---
+
+**Pronto para começar?**
+
+[Crie seu primeiro tema GRUB2 →](/getting-started/introduction/)
